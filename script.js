@@ -34,4 +34,5 @@ toggle_button.addEventListener("click", toggleEvent)
 toggle_button.addEventListener("keyup", function(char) {
     if (char.key == "Enter") {
         toggleEvent()
+    }
 })
