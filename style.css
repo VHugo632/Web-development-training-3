@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: hsl(240, 78%, 98%);
+    font-family: "Montserrat", sans-serif;
+}
+#bg_top {
+    position: absolute;
+    height: 80%;
+    right: 0;
+    user-select: none;
+}
+#bg_bottom {
+    position: absolute;
+    height: 55%;
+    bottom: 0;
+    user-select: none;
+}
+#context {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+#title {
+    position: relative;
+    text-align: center;
+    padding-top: 8vh;
+    color: hsl(233, 13%, 49%);
+}
+#toggle_zone {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 6vh;
+    list-style-type: none;
+}
+#toggle_zone .subtitles {
+    margin: 0 45px;
+}
+#annually_text, #monthly_text {
+    font-size: 17px;
+    color: hsl(234, 14%, 74%);
+    transition: color 0.3s ease-out;
+}
+#toggle_button {
+    width: 70px;
+    height: 40px;
+    background: linear-gradient(120deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    border-radius: 20px;
+    transform: translateY(-25%);
+    cursor: pointer;
+}
+#toggle_button:hover {
+    background: #c7c7f6;
+}
+#ball {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: white;
+    left: 48%;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease-out;
+}
+.toggle_activated #ball {
+    transform: translate(-83%, -50%)
+}
+#pricing {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+#card_zone {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 8vh;
+    list-style-type: none;
+}
+#card_zone li {
+    margin: 0 -3px;
+}
+.card_normal {
+    position: relative;
+    width: 375px;
+    height: 475px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 5px 5px 50px hsl(234deg 32.63% 86.19%);
+}
+#card_professional {
+    height: 525px;
+    top: -25px;
+    background: linear-gradient(120deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    z-index: 1;
+}
+.card_titles {
+    position: relative;
+    text-align: center;
+    padding-top: 35px;
+    color: hsl(233, 13%, 49%);
+    font-size: 18px;
+}
+#professional_title {
+    color: white;
+    padding-top: 70px;
+}
+.card_prices {
+    position: relative;
+    text-align: center;
+    padding-top: 25px;
+    color: hsl(232, 13%, 33%);
+    font-size: 50px;
+}
+.card_prices span {
+    font-size: 30px;
+    padding-right: 5px;
+}
+#professional_price {
+    color: white;
+}
+.card_specs, .first{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 60px;
+    border-top: 1px solid hsl(234deg 34.9% 88.13%);
+    border-bottom: 1px solid hsl(234deg 34.9% 88.13%);
+    border-radius: 1px;
+}
+.first {
+    margin-top: 35px;
+    border-bottom: none;
+}
+.last {
+    border-top: none;
+}
+#professional_specs1 {
+    margin-top: 25px;
+}
+.card_specs p {
+    position: relative;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    color: hsl(233, 13%, 49%);
+}
+#professional_specs1 p, #professional_specs2 p, #professional_specs3 p {
+    color: white;
+}
+.learn_more_button {
+    position: relative;
+    left: 50%;
+    margin-top: 35px;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 40px;
+    font-family: "Montserrat", sans-serif;
+    background: linear-gradient(120deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease-out, border 0.3s ease-out;
+}
+#professional_learn_more_button {
+    background: white;
+    color: hsl(237, 63%, 64%);
+}
+.learn_more_button:hover {
+    background: white;
+    color: hsl(237, 63%, 64%);
+    border: 1px solid hsl(237, 63%, 64%);
+}
+#professional_learn_more_button:hover {
+    background: linear-gradient(120deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    color: white;
+    border: 1px solid white;
+}
+@media screen and (width <= 1170px) {
+    #bg_top {
+        height: 55%;
+        right: -25%;
+    }
+    #bg_bottom {
+        display: none;
+    }
+    #card_zone {
+        flex-direction: column;
+        align-items: center;
+    }
+    #card_zone li {
+        margin: 20px -3px;
+    }
+    #card_professional {
+        top: 0;
+    }
+}
+@media screen and (width <= 375px) {
+    #card_zone li {
+        margin: 0;
+    }
+    .card_normal {
+        transform: scale(90%);
+    }
+}
