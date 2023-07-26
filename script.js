@@ -6,7 +6,7 @@ const card_prices = document.getElementsByClassName("card_prices")
 
 let activated = false
 
-function toggleEvent() {
+toggle_button.addEventListener("click", function(){
     body.classList.toggle("toggle_activated")
     if (activated == false) {
         activated = true
@@ -27,12 +27,5 @@ function toggleEvent() {
         card_prices[0].innerHTML = "<span>$</span>19.99"
         card_prices[1].innerHTML = "<span>$</span>24.99"
         card_prices[2].innerHTML = "<span>$</span>39.99"
-    }
-}
-
-toggle_button.addEventListener("click", toggleEvent)
-toggle_button.addEventListener("keyup", function(char) {
-    if (char.key == "Enter") {
-        toggleEvent()
     }
 })
